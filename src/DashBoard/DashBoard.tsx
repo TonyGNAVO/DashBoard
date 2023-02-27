@@ -9,8 +9,10 @@ const DashBoard = () => {
             <div className={dashBoard.dashboardWrapper}>
                 <SideBar />
                 <div className={dashBoard.sideLeftContent}>
-                    <Header />
-                    <MainContent />
+                    <div className={dashBoard.sideLeftContentWrapper}>
+                        <Header />
+                        <MainContent />
+                    </div>
                 </div>
             </div>
         </div>
