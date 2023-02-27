@@ -1,0 +1,31 @@
+.dashboard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.dashboard--wrapper {
+    background-color: red;
+    height: 100vh;
+    width: 100vh * 1.167;
+    position: relative;
+    display: flex;
+ 
+}
+
+.sideLeftContent {
+    position:relative;
+    width: calc(1185vh / 12.34);
+    height:100%;
+    display: inline-block;
+    vertical-align: top;
+    //opter pour une stratégie ou c'est le contenu intérieur qui définit la taille de cette div et de centrer le contenue en haut
+    //et en bas au lien de lui mettre des padding, maybe wrapper
+    padding: calc(30vh / 12.34);
+    padding-right: calc(33vh / 12.34);
+
+}
