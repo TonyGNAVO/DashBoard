@@ -1,0 +1,38 @@
+.menuItem{
+
+    width: 100%;
+    background-color: darkcyan;
+    display: flex;
+}
+
+.menuItem--text{
+ background-color: cornsilk;
+ display: inline;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width:calc(159vh / 12.34) ;
+}
+
+.menuItem--text--wrapper{
+    background-color: cornsilk;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-5%);
+
+}
+
+.menuItem--Icon{
+    
+    background-color: darkblue;
+    display: block;
+    width: calc(16vh / 12.34);
+    height: calc(16vh / 12.34);
+    margin-top:calc(20vh / 12.34) ;
+    margin-bottom:calc(20vh / 12.34) ;
+    margin-left:calc(32vh / 12.34) ;
+    margin-right:calc(24vh / 12.34) ;
+
+}
