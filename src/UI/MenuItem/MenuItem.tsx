@@ -5,7 +5,7 @@ const MenuItem = ({ text }) => {
         <a href="0">
             <div className={MenuItemCss.menuItem}>
                 <div className={MenuItemCss.menuItemIcon}>
-
+                    <img src="assets/images/Overview.svg" alt="" />
                 </div>
                 <span className={MenuItemCss.menuItemText}>
                     <span className={MenuItemCss.menuItemTextWrapper}>

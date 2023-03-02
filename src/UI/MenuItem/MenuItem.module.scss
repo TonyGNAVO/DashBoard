@@ -1,12 +1,9 @@
 .menuItem{
-
     width: 100%;
-    background-color: darkcyan;
     display: flex;
 }
 
 .menuItem--text{
-    background-color: cornsilk;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -17,13 +14,13 @@
 }
 
 .menuItem--text--wrapper{
-    background-color: cornsilk;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 0.1rem;
+    color:#A4A6B3 ;
  
 }
 
