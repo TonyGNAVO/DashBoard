@@ -1,17 +1,17 @@
 import MenuItemCss from "./MenuItem.module.scss"
 
-const MenuItem = () => {
+const MenuItem = ({ text }) => {
     return (
         <a href="0">
             <div className={MenuItemCss.menuItem}>
                 <div className={MenuItemCss.menuItemIcon}>
 
                 </div>
-                <div className={MenuItemCss.menuItemText}>
+                <span className={MenuItemCss.menuItemText}>
                     <span className={MenuItemCss.menuItemTextWrapper}>
-                        Overview
+                        {text}
                     </span>
-                </div>
+                </span>
             </div>
         </a>
     )

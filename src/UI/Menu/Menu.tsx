@@ -1,11 +1,14 @@
-import MenuCss from "./Menu.module.scss"
 import MenuItem from "../MenuItem/MenuItem"
 
+const itemsText = ["Overview", "Tickets", "Ideas", "Contacts", "Agents", "Articles", "Settings", "Subscription"]
 const Menu = () => {
 
     return (
-        <div className={MenuCss.menuItemText}>
-            <MenuItem />
+        <div >
+            {
+                itemsText.map(t => <MenuItem text={t} />)
+            }
+
         </div>
     )
 }

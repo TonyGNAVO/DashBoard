@@ -6,33 +6,36 @@
 }
 
 .menuItem--text{
- background-color: cornsilk;
- display: inline;
- display: flex;
- justify-content: center;
- align-items: center;
- width:calc(159vh / 12.34) ;
+    background-color: cornsilk;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width:calc(159vh / 12.34) ;
+    height: calc(20vh / 12.34);
 }
 
 .menuItem--text--wrapper{
     background-color: cornsilk;
-    display: inline;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-5%);
-
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 0.1rem;
+ 
 }
 
 .menuItem--Icon{
     
     background-color: darkblue;
     display: block;
-    width: calc(16vh / 12.34);
-    height: calc(16vh / 12.34);
-    margin-top:calc(20vh / 12.34) ;
-    margin-bottom:calc(20vh / 12.34) ;
-    margin-left:calc(32vh / 12.34) ;
-    margin-right:calc(24vh / 12.34) ;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top:2rem ;
+    margin-bottom:2rem ;
+    margin-left:3.2rem;
+    margin-right:2.4rem;
 
 }
