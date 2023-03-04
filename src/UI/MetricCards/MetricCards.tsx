@@ -1,7 +1,6 @@
 import MetricCardCss from "./MetricCards.module.scss"
 import MetricCard from "../MetricCard/MetricCard"
 
-console.log(MetricCardCss)
 const MetricCards = () => {
 
     return (
