@@ -1,9 +1,11 @@
 import MenuItemCss from "./MenuItem.module.scss"
+import { Link } from "react-router-dom";
 
-const MenuItem = ({ text, src }) => {
+const MenuItem = ({ text, src, link, active }) => {
+
     return (
-        <a href="0">
-            <div className={MenuItemCss.menuItem}>
+        <Link to={`/${link}`}>
+            <div className={active ? `${MenuItemCss.menuItem} ${MenuItemCss.menuItemActive}` : `${MenuItemCss.menuItem}`}>
                 <div className={MenuItemCss.menuItemIcon}>
                     <img className={MenuItemCss.menuItemImage} src={src} alt={text} />
                 </div>
@@ -13,7 +15,7 @@ const MenuItem = ({ text, src }) => {
                     </span>
                 </span>
             </div>
-        </a>
+        </Link>
     )
 }
 
