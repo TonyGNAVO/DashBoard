@@ -10,7 +10,7 @@ const MenuItem = ({ text, src, link, active }) => {
                     <img className={MenuItemCss.menuItemImage} src={src} alt={text} />
                 </div>
                 <span className={MenuItemCss.menuItemText}>
-                    <span className={MenuItemCss.menuItemTextWrapper}>
+                    <span className={active ? `${MenuItemCss.menuItemTextWrapper} ${MenuItemCss.menuItemTextWrapperActive}` : `${MenuItemCss.menuItemTextWrapper}`}>
                         {text}
                     </span>
                 </span>
