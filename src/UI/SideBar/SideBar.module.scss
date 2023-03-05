@@ -4,3 +4,17 @@
     text-align: end;
     background-color:  #363740;
 }
+
+
+.sidebar--wrapper{
+
+}
+
+@media screen and (min-width: 768px) and (max-aspect-ratio: 1440/1234) {
+    .sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+}

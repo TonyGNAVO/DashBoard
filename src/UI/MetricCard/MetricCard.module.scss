@@ -1,5 +1,15 @@
 .metricCard{
     height: 13.4rem;
     width:25.8rem ;
-    background-color: chartreuse;
+    border-radius: 0.8rem;
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+}
+
+.metricCard:hover{
+    border: 1px solid #3751FF;
+}
+
+.metricCard--active{
+    
 }

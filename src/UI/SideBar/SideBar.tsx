@@ -6,8 +6,10 @@ const SideBar = () => {
 
     return (
         <aside className={sideBar.sidebar}>
-            <DashBoardIdentity />
-            <Menu />
+            <div className={sideBar.sidebarWrapper}>
+                <DashBoardIdentity />
+                <Menu />
+            </div>
         </aside>
     )
 }
