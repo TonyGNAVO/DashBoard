@@ -9,4 +9,8 @@ export default defineConfig({
             localsConvention: "camelCase",
         },
     },
+    test: {
+        globals: true,
+        environment: "happy-dom",
+    },
 });
