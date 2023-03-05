@@ -1,8 +1,15 @@
 import MenuItemCss from "./MenuItem.module.scss"
 import { Link } from "react-router-dom";
 import MenuItemIcon from "../MenuItemIcon/MenuItemIcon";
+import { FC } from "react";
 
-const MenuItem = ({ text, link, active }) => {
+
+type MenuItemPropsType = {
+    text: string,
+    link: string,
+    active: boolean
+}
+const MenuItem: FC<MenuItemPropsType> = ({ text, link, active }) => {
 
     return (
         <Link to={`/${link}`}>
