@@ -3,10 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
     plugins: [react()],
-    root: "src/UI/App",
-    css: {
-        modules: {
-            localsConvention: "camelCase",
-        },
+    root: "src/",
+    test: {
+        globals: true,
+        environment: "happy-dom",
     },
 });
