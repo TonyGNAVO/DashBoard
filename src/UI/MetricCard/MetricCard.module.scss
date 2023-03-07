@@ -3,13 +3,9 @@
     width:25.8rem ;
     border-radius: 0.8rem;
     background: #FFFFFF;
-    border: 1px solid #DFE0EB;
+    border: 0.1rem solid #DFE0EB;
+    box-sizing: content-box;
 }
-
 .metricCard:hover{
-    border: 1px solid #3751FF;
-}
-
-.metricCard--active{
-    
+    border: 0.1rem solid #3751FF;
 }
