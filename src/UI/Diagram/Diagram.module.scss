@@ -1,0 +1,74 @@
+.diagram--title {
+    height: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    letter-spacing:0.04rem;
+    color: #252733;
+}
+
+.diagram--description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.01rem;
+    color: #9FA2B4;
+    height: 1.6rem;
+    display: flex;
+    margin-top: 0.8rem;
+}
+
+
+
+.diagram--label {
+    height: 1.6rem;
+    width: 17.2rem;
+    position: absolute;
+    right: 3.2rem;
+    top:6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.diagram--label--item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 0.5rem;
+    letter-spacing: 0.01rem;    
+    color: #9FA2B4;
+}
+.diagram--label--today--stick{
+
+    background-color: #3751FF;
+
+}
+
+.stick{
+    height:0.2rem;
+    width: 1.6rem;
+    border-radius: 50%;
+    margin-right: 0.8rem;   
+}
+.diagram--label--yesterday--stick{
+    background-color: #DFE0EB;
+}
+.diagram--media {
+    width:68.6rem;
+    height: 38.0rem;
+    object-fit: cover;
+    margin-top: 5.4rem;
+}
+
+.diagram--media--image {
+    width:100%;
+    height: 100%;
+}

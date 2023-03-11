@@ -5,4 +5,21 @@
     background: #FFFFFF;
     border: 1px solid #DFE0EB;
     border-radius: 0.8rem;
+    display: flex;
+    overflow: hidden;
+
 }
+
+.metricStats--diagram{
+    width: calc(112.2rem - 34.2rem);
+    height: 100%;
+    padding: 3.2rem;
+    position: relative;
+}
+.metricStats--value{
+    width: 34.2rem;
+    height: 100%;
+    background-color:bisque;
+}
+
+
