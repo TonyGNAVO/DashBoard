@@ -1,8 +1,6 @@
 import DiagramCss from "./Diagram.module.scss"
 import Graph from "./../../Images/Graph.png"
 const Diagram = () => {
-    console.log(DiagramCss)
-
     return (
         <>
             <h2 className={DiagramCss.diagramTitle}>

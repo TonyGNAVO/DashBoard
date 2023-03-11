@@ -3,7 +3,7 @@
     height:54.6rem;
     margin-top: 3.0rem ;
     background: #FFFFFF;
-    border: 1px solid #DFE0EB;
+    border: 0.1rem solid #DFE0EB;
     border-radius: 0.8rem;
     display: flex;
     overflow: hidden;
@@ -19,7 +19,10 @@
 .metricStats--value{
     width: 34.2rem;
     height: 100%;
-    background-color:bisque;
+    border-left: 0.1rem solid #DFE0EB;
+    div:not(:last-child){
+        border-bottom: 0.1rem #DFE0EB solid;
+    }
 }
 
 

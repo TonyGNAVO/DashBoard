@@ -35,14 +35,14 @@
 }
 
 
-
 .diagram--label--item{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-weight: 600;
+    font-style: normal;
     font-size: 1.2rem;
-    line-height: 0.5rem;
+    line-height: 1.5rem;
     letter-spacing: 0.01rem;    
     color: #9FA2B4;
 }
