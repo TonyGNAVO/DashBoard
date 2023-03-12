@@ -5,7 +5,7 @@ import MetricStatItem from "../App/MetricStatItem/MetricStatItem";
 type MetricStatItemProps = { id: number, title: string, value: string }
 
 const props: MetricStatItemProps[] = [
-    { id: 1, title: "resolved", value: "449" },
+    { id: 1, title: "Resolved", value: "449" },
     { id: 2, title: "Received", value: "426" },
     { id: 3, title: "Average first response time", value: "33m" },
     { id: 4, title: "Average response time", value: "3h 8m" },

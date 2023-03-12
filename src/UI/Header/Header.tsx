@@ -1,7 +1,7 @@
 import HeaderCss from "./Header.module.scss"
-import userPhoto from "./../../Images/userPhoto.png"
-import searchIcon from "./../../Images/search.svg"
-import notificationIcon from "./../../Images/notification.svg"
+import userPhoto from "../../Images/userPhoto.png"
+import searchIcon from "../../Images/search.svg"
+import notificationIcon from "../../Images/notification.svg"
 import { useParams } from "react-router-dom"
 
 const Header = () => {

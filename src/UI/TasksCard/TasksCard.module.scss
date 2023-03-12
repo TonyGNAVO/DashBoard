@@ -1,0 +1,78 @@
+.tasksCard--title{
+    height: 2.4rem;
+    width: 33.6rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.04rem;
+    color: #252733;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.tasksCard--all{
+    position: absolute;
+    height: 2rem;
+    top: 3.6rem;
+    right:3.2rem ;
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    letter-spacing: 0.02rem;
+    color: #3751FF;
+
+  
+}
+
+
+
+.tasksCard--day{
+    height: 1.6rem;
+    font-weight: 400;
+    font-size:1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.01rem;
+    color: #9FA2B4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.tasksCard--rowCreate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}   
+
+
+.tasksCard--rowCreate--placeholder{
+    height: 2rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.02rem;
+    font-style: normal;
+    color: #C5C7CD;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom:1.8rem ;
+
+}
+
+.tasksCard--rowCreate--media{
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 1.7rem 0;
+}
+
+.tasksCard--rowCreate--media--img{
+    width: 100%;
+    height: 100%;
+}

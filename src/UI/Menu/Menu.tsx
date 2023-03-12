@@ -6,21 +6,21 @@ import { useParams } from "react-router-dom"
 
 type MenuItemProps = { id: number, contentText: string, link: string, active: boolean }
 
-const menuItemProps: MenuItemProps[] = [
-    { id: 1, contentText: "Overview", link: "overview", active: false },
-    { id: 2, contentText: "Tickets", link: "tickets", active: false },
-    { id: 3, contentText: "Ideas", link: "ideas", active: false },
-    { id: 4, contentText: "Contacts", link: "contacts", active: false },
-    { id: 5, contentText: "Agents", link: "agents", active: false },
-    { id: 6, contentText: "Articles", link: "articles", active: false }
-]
-const menuItemProps2: MenuItemProps[] = [
-    { id: 7, contentText: "Settings", link: "setting", active: false },
-    { id: 8, contentText: "Subscription", link: "subscription", active: false }
-]
 
 
 const Menu = () => {
+    const menuItemProps: MenuItemProps[] = [
+        { id: 1, contentText: "Overview", link: "overview", active: false },
+        { id: 2, contentText: "Tickets", link: "tickets", active: false },
+        { id: 3, contentText: "Ideas", link: "ideas", active: false },
+        { id: 4, contentText: "Contacts", link: "contacts", active: false },
+        { id: 5, contentText: "Agents", link: "agents", active: false },
+        { id: 6, contentText: "Articles", link: "articles", active: false }
+    ]
+    const menuItemProps2: MenuItemProps[] = [
+        { id: 7, contentText: "Settings", link: "setting", active: false },
+        { id: 8, contentText: "Subscription", link: "subscription", active: false }
+    ]
 
     const { tab } = useParams();
     const activeItem = menuItemProps.find(item => item.link === tab)
