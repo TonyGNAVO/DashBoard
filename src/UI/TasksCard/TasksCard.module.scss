@@ -1,25 +1,27 @@
 .tasksCard--title{
     height: 2.4rem;
-    width: 33.6rem;
+    width: 50%;
     font-style: normal;
     font-weight: 700;
     font-size: 1.9rem;
     line-height: 2.4rem;
     letter-spacing: 0.04rem;
     color: #252733;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-bottom: 0.8rem;
-    margin-left: 3.2rem;
+    padding-left: 3.2rem;
 }
 
 .tasksCard--all{
-    position: absolute;
+
     height: 2rem;
-    top: 3.6rem;
-    right:3.2rem ;
-    display: flex;
+    width: 50%;
+    display: inline-flex;
     align-items: center;
+    justify-content: end;
+    padding-right: 3.2rem;
+    margin-top: 0.4rem;
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -36,11 +38,12 @@
     font-size:1.2rem;
     line-height: 1.6rem;
     letter-spacing: 0.01rem;
+    margin-left: 3.2rem;
     color: #9FA2B4;
     display: flex;
     align-items: center;
     margin-bottom: 1.6rem;
-    margin-left: 3.2rem;
+    transform: translateX(0.15%);
 }
 
 .tasksCard--rowCreate{
