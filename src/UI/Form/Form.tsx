@@ -13,7 +13,7 @@ export const Form: FC<Props> = ({ active, setIsFormActive }) => {
                 <div className={FormCss.formRow}>
                     <label >
                         Name:
-                        <input type="text" max={50} />
+                        <input type="text" max={45} />
                     </label>
                 </div>
                 <div className={FormCss.formRow}>
