@@ -7,10 +7,10 @@ import React, { useState } from 'react'
 const TasksCard = () => {
 
     const [isFormActive, setIsFormActive] = useState(false)
+    // ajout d'un contexte pour les tâches qui a l'ensemble des tâches
 
     return (
         <>
-            <Form active={isFormActive} setIsFormActive={setIsFormActive} />
             <h2 className={TasksCardCSS.tasksCardTitle}>Tasks</h2>
             <p className={TasksCardCSS.tasksCardAll}>View all</p>
             <p className={TasksCardCSS.tasksCardDay}>Today</p>
@@ -21,8 +21,8 @@ const TasksCard = () => {
                 </figure>
             </div>
             <Tasks />
+            <Form active={isFormActive} setIsFormActive={setIsFormActive} />
         </>
     )
 }
-
 export default TasksCard;
