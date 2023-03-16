@@ -1,8 +1,9 @@
 html {
+    width: auto;
+    height: auto;
     --zoom--scale:1;
     font-family: 'Mulish', sans-serif;
-    font-size: calc((100dvh / 1234 * 10) * var(--zoom--scale)) 
-
+    font-size: calc((100dvh / 1234 * 10) * var(--zoom--scale));    
 }
 
 @media screen and  (min-width: 768px) and (max-aspect-ratio: 1440/1234) {
@@ -12,8 +13,10 @@ html {
 }
 
 .dashboard {
-    width: calc(100vw*var(--zoom--scale));
-    height: calc(100dvh * var(--zoom--scale));
+    min-width: 100vw;
+    width:calc(100vw * var(--zoom--scale));
+    min-height:100dvh;
+    max-height: calc(100vh * var(--zoom--scale));
     display: flex;
     justify-content: center;
     align-items: center;
