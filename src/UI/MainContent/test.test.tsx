@@ -1,10 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { getNewPageNumber } from './computeIncrement';
-import { isPageAdanceAbleToBeDisable } from './right';
-import { getNumberOfFirstElementOfTheNewpage } from "./first"
-import { getNumberFinaElementOfTheNewpage } from "./final"
 import { getTheNextPagination } from './getTheNextPagination';
 import { Pagination } from './Pagination';
+import {
+    getNumberFinaElementOfTheNewpage,
+    getNumberOfFirstElementOfTheNewpage,
+    isPageAdanceAbleToBeDisable,
+    getNewPageNumber
+} from "./NextPaginationUtils"
 
 
 describe('Get the new page number after ask the next page', () => {

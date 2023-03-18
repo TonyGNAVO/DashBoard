@@ -1,22 +1,25 @@
 import { Pagination } from "./Pagination"
-import { getNewPageNumber } from "./computeIncrement"
-import { isPageAdanceAbleToBeDisable } from "./right"
-import { getNumberOfFirstElementOfTheNewpage } from "./first"
-import { getNumberFinaElementOfTheNewpage } from "./final"
+import { NextPaginationBuilder } from "./NextPaginationBuilder"
+
+
+import {
+    getNumberFinaElementOfTheNewpage,
+    getNumberOfFirstElementOfTheNewpage,
+    isPageAdanceAbleToBeDisable,
+    getNewPageNumber
+} from "./NextPaginationUtils"
 
 export const getTheNextPagination = (pagination: Pagination): Pagination => {
 
-    const paginationSnapshot: Pagination = structuredClone(pagination)
-    const { left, numberOfElement, numberOfElementPerPage, finalPageNumber } = paginationSnapshot
+    const currentPageNumber = getNewPageNumber(pagination.currentPageNumber);
+    const first = getNumberOfFirstElementOfTheNewpage(pagination.numberOfElementPerPage, pagination.currentPageNumber);
+    const last = getNumberFinaElementOfTheNewpage(pagination.numberOfElementPerPage, pagination.currentPageNumber, pagination.numberOfElement);
+    const right = isPageAdanceAbleToBeDisable(pagination.currentPageNumber, pagination.finalPageNumber);
 
-    return {
-        currentPageNumber: getNewPageNumber(pagination.currentPageNumber),
-        right: isPageAdanceAbleToBeDisable(pagination.currentPageNumber, pagination.finalPageNumber),
-        first: getNumberOfFirstElementOfTheNewpage(pagination.numberOfElementPerPage, pagination.currentPageNumber),
-        last: getNumberFinaElementOfTheNewpage(pagination.numberOfElementPerPage, pagination.currentPageNumber, pagination.numberOfElement),
-        left,
-        numberOfElement,
-        numberOfElementPerPage,
-        finalPageNumber
-    }
+    return new NextPaginationBuilder(pagination).
+        currentPageNumber(currentPageNumber).
+        first(first).
+        last(last).
+        right(right).
+        build()
 }  
