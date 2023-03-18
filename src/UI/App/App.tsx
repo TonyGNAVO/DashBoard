@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Reset.module.scss";
-import "./base.module.scss"
 import DashBoard from "../DashBoard/DashBoard";
 
 
