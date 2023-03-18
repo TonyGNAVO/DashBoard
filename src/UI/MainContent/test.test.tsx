@@ -66,46 +66,46 @@ describe('right', () => {
 });
 
 describe('first', () => {
-    it('3 et 2 ', () => {
+    it('3 et 1 ', () => {
         const numberOfItemPerPage = 3;
-        const currentPageNumber = 2;
+        const currentPageNumber = 1;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(4);
     });
 
-    it('4 et 2 ', () => {
+    it('4 et 1 ', () => {
         const numberOfItemPerPage = 4;
-        const currentPageNumber = 2;
+        const currentPageNumber = 1;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(5);
     });
 
-    it('5 et 2 ', () => {
+    it('5 et 1 ', () => {
         const numberOfItemPerPage = 5;
-        const currentPageNumber = 2;
+        const currentPageNumber = 1;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(6);
     });
 
 
-    it('5 et 3 ', () => {
+    it('5 et 2 ', () => {
         const numberOfItemPerPage = 5;
-        const currentPageNumber = 3;
+        const currentPageNumber = 2;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(11);
     });
 
-    it('5 et 4 ', () => {
+    it('5 et 3 ', () => {
         const numberOfItemPerPage = 5;
-        const currentPageNumber = 4;
+        const currentPageNumber = 3;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(16);
     });
 
     //move ther both at the same time
-    it('6 et 3 ', () => {
+    it('7 et 4 ', () => {
         const numberOfItemPerPage = 7;
-        const currentPageNumber = 5;
+        const currentPageNumber = 4;
         const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
         expect(numberOfFirstElementOfTheNewpage).toBe(29);
     });
