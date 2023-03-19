@@ -1,15 +1,16 @@
 import TasksTicketsCss from "./TasksTickets.module.scss";
-import TasksCard from "../TasksCard/TasksCard";
-import { TicketsCard } from "../TicketsCard/TicketsCard";
+import { Tickets } from "../Tickets/Tickets";
+import Tasks from "../Tasks/Tasks";
+import { TasksTicketsCard } from "../TasksTicketsCard/TasksTicketsCard";
 const TasksTickets = () => {
     return (
         <div className={TasksTicketsCss.tasksTickets}>
-            <div className={TasksTicketsCss.tasksTicketsCard}>
-                <TicketsCard />
-            </div>
-            <div className={TasksTicketsCss.tasksTicketsCard}>
-                <TasksCard />
-            </div>
+            <TasksTicketsCard>
+                <Tickets />
+            </TasksTicketsCard>
+            <TasksTicketsCard>
+                <Tasks />
+            </TasksTicketsCard>
         </div>
     );
 };

@@ -29,7 +29,7 @@ const TicketStatsItems: TicketStatsItemType[] = [
     },
 ];
 
-export const TicketsCard = () => {
+export const Tickets = () => {
     return (
         <>
             <h2 className={TicketsCardCss.ticketsCardTitle}>

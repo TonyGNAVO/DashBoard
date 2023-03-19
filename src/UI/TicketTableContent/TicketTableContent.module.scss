@@ -1,5 +1,6 @@
 .ticketTableContent{
- margin-left: 3.1rem;
+
+ width: 100%;
 }
 
 .ticketTableContent--fields{
@@ -17,6 +18,9 @@
     
     :not(:last-child){
         margin-right: 4rem;
+    }
+        :first-child{
+        margin-left: 3.1rem;
     }
 }
 .firstCol{

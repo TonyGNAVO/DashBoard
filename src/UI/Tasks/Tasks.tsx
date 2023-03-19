@@ -1,40 +1,31 @@
-import { Task } from "../Task/Task";
-import { TaskStatusEnum } from "../Task/TaskStatusEnum";
+import TasksCardCSS from "./TasksCard.module.scss";
+import CreateIcon from "../../Images/CreateIcon.svg";
+import { TaskList } from "../TasksList/Tasks";
+import { useState } from "react";
 
-type TaskProps = {
-    id: number;
-    taskName: string;
-    taskStatus: TaskStatusEnum;
-};
-
-export const Tasks = () => {
-    const taskProps: TaskProps[] = [
-        {
-            id: 1,
-            taskName: "Finish ticket update",
-            taskStatus: TaskStatusEnum.URGENT,
-        },
-        {
-            id: 2,
-            taskName: "Create new ticket example",
-            taskStatus: TaskStatusEnum.NEW,
-        },
-        {
-            id: 3,
-            taskName: "Finish ticket update",
-            taskStatus: TaskStatusEnum.DEFAULT,
-        },
-    ];
+const TasksCard = () => {
+    const [isFormActive, setIsFormActive] = useState(false);
+    // ajout d'un contexte pour les tâches qui a l'ensemble des tâches
 
     return (
         <>
-            {taskProps.map((p) => (
-                <Task
-                    key={p.id}
-                    taskName={p.taskName}
-                    taskStatus={p.taskStatus}
-                />
-            ))}
+            <h2 className={TasksCardCSS.tasksCardTitle}>Tasks</h2>
+            <p className={TasksCardCSS.tasksCardAll}>View all</p>
+            <p className={TasksCardCSS.tasksCardDay}>Today</p>
+            <div className={TasksCardCSS.tasksCardRowCreate}>
+                <p className={TasksCardCSS.tasksCardRowCreatePlaceholder}>
+                    Create new task
+                </p>
+                <figure className={TasksCardCSS.tasksCardRowCreateMedia}>
+                    <img
+                        className={TasksCardCSS.tasksCardRowCreateMediaImg}
+                        src={CreateIcon}
+                        alt="Icon to create a task"
+                    />
+                </figure>
+            </div>
+            <TaskList />
         </>
     );
 };
+export default TasksCard;
