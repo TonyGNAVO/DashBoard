@@ -1,4 +1,4 @@
-import MetricCardCss from "./style.module.scss";
+import Css from "./style.module.scss";
 import MetricCard from "../MetricCard/MetricCard";
 
 type cardProps = { id: number; title: string; value: number };
@@ -12,7 +12,7 @@ const cards: cardProps[] = [
 
 const MetricCards = () => {
     return (
-        <div className={MetricCardCss.metricCards}>
+        <div className={Css.metricCards}>
             {cards.map((card) => (
                 <MetricCard
                     key={card.id}
