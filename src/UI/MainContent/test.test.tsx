@@ -1,205 +1,287 @@
-import { describe, it, expect } from 'vitest';
-import { getTheNextPagination } from './getTheNextPagination';
-import { Pagination } from './Pagination';
+import { describe, it, expect } from "vitest";
+import { getTheNextPagination } from "./getTheNextPagination";
+import { Pagination } from "./Pagination";
 import {
     getNumberFinaElementOfTheNewpage,
     getNumberOfFirstElementOfTheNewpage,
     isPageAdanceAbleToBeDisable,
-    getNewPageNumber
-} from "./NextPaginationUtils"
+    getNewPageNumber,
+} from "./NextPaginationUtils";
 
-
-describe('Get the new page number after ask the next page', () => {
-    it('should return when the current page Number is 1', () => {
+describe("Get the new page number after ask the next page", () => {
+    it("should return when the current page Number is 1", () => {
         const currentPageNumber = 0;
-        const newPage = getNewPageNumber(currentPageNumber)
+        const newPage = getNewPageNumber(currentPageNumber);
         expect(newPage).toBe(1);
     });
-    it('should return when the current page number is 2', () => {
+    it("should return when the current page number is 2", () => {
         const currentPageNumber = 1;
-        const newPage = getNewPageNumber(currentPageNumber)
+        const newPage = getNewPageNumber(currentPageNumber);
         expect(newPage).toBe(2);
     });
 });
 
-describe('Know if the we should be able to ask the next page the next time', () => {
-    it('(currentPageNumber = 1 , lastPageNumber = 1)  => false', () => {
+describe("Know if the we should be able to ask the next page the next time", () => {
+    it("(currentPageNumber = 1 , lastPageNumber = 1)  => false", () => {
         const currentPageNumber = 1;
         const lastPageNumber = 1;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(false);
     });
 
-    it('(currentPageNumber = 1 , lastPageNumber = 2)  => false', () => {
+    it("(currentPageNumber = 1 , lastPageNumber = 2)  => false", () => {
         const currentPageNumber = 1;
         const lastPageNumber = 2;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(false);
     });
 
-    it('(currentPageNumber = 2 , lastPageNumber = 3)  => false', () => {
+    it("(currentPageNumber = 2 , lastPageNumber = 3)  => false", () => {
         const currentPageNumber = 2;
         const lastPageNumber = 3;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(false);
     });
-    it('(currentPageNumber = 3 , lastPageNumber = 4)  => false', () => {
+    it("(currentPageNumber = 3 , lastPageNumber = 4)  => false", () => {
         const currentPageNumber = 3;
         const lastPageNumber = 4;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(false);
     });
-    it('(currentPageNumber = 1 , lastPageNumber = 3)  => true', () => {
+    it("(currentPageNumber = 1 , lastPageNumber = 3)  => true", () => {
         const currentPageNumber = 1;
         const lastPageNumber = 3;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(true);
     });
-    it('(currentPageNumber = 2 , lastPageNumber = 4)  => true', () => {
+    it("(currentPageNumber = 2 , lastPageNumber = 4)  => true", () => {
         const currentPageNumber = 2;
         const lastPageNumber = 4;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(true);
     });
 
-    it('(currentPageNumber = 1005 , lastPageNumber = 100000)  => true', () => {
+    it("(currentPageNumber = 1005 , lastPageNumber = 100000)  => true", () => {
         const currentPageNumber = 1005;
         const lastPageNumber = 100000;
-        const isRightButtonDisable = isPageAdanceAbleToBeDisable(currentPageNumber, lastPageNumber)
+        const isRightButtonDisable = isPageAdanceAbleToBeDisable(
+            currentPageNumber,
+            lastPageNumber
+        );
         expect(isRightButtonDisable).toBe(true);
     });
 });
 
-describe('Get the first element of the page', () => {
-    it('3 et 1 ', () => {
+describe("Get the first element of the page", () => {
+    it("3 et 1 ", () => {
         const numberOfItemPerPage = 3;
         const currentPageNumber = 1;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(4);
     });
 
-    it('4 et 1 ', () => {
+    it("4 et 1 ", () => {
         const numberOfItemPerPage = 4;
         const currentPageNumber = 1;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(5);
     });
 
-    it('5 et 1 ', () => {
+    it("5 et 1 ", () => {
         const numberOfItemPerPage = 5;
         const currentPageNumber = 1;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(6);
     });
 
-
-    it('5 et 2 ', () => {
+    it("5 et 2 ", () => {
         const numberOfItemPerPage = 5;
         const currentPageNumber = 2;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(11);
     });
 
-    it('5 et 3 ', () => {
+    it("5 et 3 ", () => {
         const numberOfItemPerPage = 5;
         const currentPageNumber = 3;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(16);
     });
 
     //move ther both at the same time
-    it('7 et 4 ', () => {
+    it("7 et 4 ", () => {
         const numberOfItemPerPage = 7;
         const currentPageNumber = 4;
-        const numberOfFirstElementOfTheNewpage = getNumberOfFirstElementOfTheNewpage(numberOfItemPerPage, currentPageNumber);
+        const numberOfFirstElementOfTheNewpage =
+            getNumberOfFirstElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber
+            );
         expect(numberOfFirstElementOfTheNewpage).toBe(29);
     });
-
 });
-describe('Get the last Element of the page', () => {
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=5, )  => 4', () => {
+describe("Get the last Element of the page", () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=5, )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 1;
         const itemTotal = 5;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(4);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=6 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=6 )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 1;
         const itemTotal = 6;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(4);
     });
 
-    it('(numberOfItemPerPage = 3 , currentPageNumber = 1 , itemTotal=7 )  => 4', () => {
+    it("(numberOfItemPerPage = 3 , currentPageNumber = 1 , itemTotal=7 )  => 4", () => {
         const numberOfItemPerPage = 3;
         const currentPageNumber = 1;
         const itemTotal = 7;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(6);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 2 , itemTotal=7 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 2 , itemTotal=7 )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 2;
         const itemTotal = 7;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(6);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=9 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=9 )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 3;
         const itemTotal = 9;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(8);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=3 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 1 , itemTotal=3 )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 1;
         const itemTotal = 3;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(3);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=11 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=11 )  => 4", () => {
         const numberOfItemPerPage = 2;
         const currentPageNumber = 5;
         const itemTotal = 11;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(11);
     });
 
-    it('(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=13 )  => 4', () => {
+    it("(numberOfItemPerPage = 2 , currentPageNumber = 3 , itemTotal=13 )  => 4", () => {
         const numberOfItemPerPage = 3;
         const currentPageNumber = 4;
-        const itemTotal = 13
+        const itemTotal = 13;
 
-        const numberOfFinalElementOfTheNewpage = getNumberFinaElementOfTheNewpage(numberOfItemPerPage, currentPageNumber, itemTotal)
+        const numberOfFinalElementOfTheNewpage =
+            getNumberFinaElementOfTheNewpage(
+                numberOfItemPerPage,
+                currentPageNumber,
+                itemTotal
+            );
 
         expect(numberOfFinalElementOfTheNewpage).toBe(13);
     });
 });
 
-describe('Get the new Pagination from current pagination', () => {
-    it('next', () => {
+describe("Get the new Pagination from current pagination", () => {
+    it("next", () => {
         const currentPagination: Pagination = {
             currentPageNumber: 1,
             left: false,
@@ -208,10 +290,10 @@ describe('Get the new Pagination from current pagination', () => {
             last: 0,
             numberOfElement: 5,
             numberOfElementPerPage: 2,
-            finalPageNumber: 3
+            finalPageNumber: 3,
         };
 
-        const nextPagination = getTheNextPagination(currentPagination)
+        const nextPagination = getTheNextPagination(currentPagination);
 
         expect(nextPagination).toEqual({
             currentPageNumber: 2,
@@ -221,12 +303,11 @@ describe('Get the new Pagination from current pagination', () => {
             last: 4,
             numberOfElement: 5,
             numberOfElementPerPage: 2,
-            finalPageNumber: 3
+            finalPageNumber: 3,
         });
     });
 
-
-    it('next 2', () => {
+    it("next 2", () => {
         const currentPagination: Pagination = {
             currentPageNumber: 2,
             left: false,
@@ -235,10 +316,10 @@ describe('Get the new Pagination from current pagination', () => {
             last: 0,
             numberOfElement: 7,
             numberOfElementPerPage: 2,
-            finalPageNumber: 4
+            finalPageNumber: 4,
         };
 
-        const nextPagination = getTheNextPagination(currentPagination)
+        const nextPagination = getTheNextPagination(currentPagination);
 
         expect(nextPagination).toEqual({
             currentPageNumber: 3,
@@ -248,11 +329,11 @@ describe('Get the new Pagination from current pagination', () => {
             last: 6,
             numberOfElement: 7,
             numberOfElementPerPage: 2,
-            finalPageNumber: 4
+            finalPageNumber: 4,
         });
     });
 
-    it('next 3', () => {
+    it("next 3", () => {
         const currentPagination: Pagination = {
             currentPageNumber: 3,
             left: false,
@@ -261,10 +342,10 @@ describe('Get the new Pagination from current pagination', () => {
             last: 0,
             numberOfElement: 11,
             numberOfElementPerPage: 3,
-            finalPageNumber: 4
+            finalPageNumber: 4,
         };
 
-        const nextPagination = getTheNextPagination(currentPagination)
+        const nextPagination = getTheNextPagination(currentPagination);
 
         expect(nextPagination).toEqual({
             currentPageNumber: 4,
@@ -274,7 +355,7 @@ describe('Get the new Pagination from current pagination', () => {
             last: 11,
             numberOfElement: 11,
             numberOfElementPerPage: 3,
-            finalPageNumber: 4
+            finalPageNumber: 4,
         });
     });
 });

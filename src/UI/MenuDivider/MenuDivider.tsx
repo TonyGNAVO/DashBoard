@@ -1,13 +1,7 @@
-import MenuDividerCss from "./MenuDivider.module.scss"
+import MenuDividerCss from "./MenuDivider.module.scss";
 
 const MenuDivider = () => {
-
-
-    return (
-        <div className={MenuDividerCss.menuDivider}>
-
-        </div>
-    )
-}
+    return <div className={MenuDividerCss.menuDivider}></div>;
+};
 
 export default MenuDivider;

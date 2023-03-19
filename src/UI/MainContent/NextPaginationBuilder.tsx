@@ -1,7 +1,6 @@
 import { Pagination } from "./Pagination";
 import { PaginationBuilder } from "./PaginationBuilder";
 export class NextPaginationBuilder implements PaginationBuilder {
-
     private paginationSnapshot: Pagination;
     private rightValue = false;
     private firstValue = 0;
@@ -10,7 +9,6 @@ export class NextPaginationBuilder implements PaginationBuilder {
 
     constructor(pagination: Pagination) {
         this.paginationSnapshot = structuredClone(pagination);
-
     }
 
     right(value: boolean): NextPaginationBuilder {
@@ -38,14 +36,12 @@ export class NextPaginationBuilder implements PaginationBuilder {
             left: this.paginationSnapshot.left,
             numberOfElement: this.paginationSnapshot.numberOfElement,
             finalPageNumber: this.paginationSnapshot.finalPageNumber,
-            numberOfElementPerPage: this.paginationSnapshot.numberOfElementPerPage,
+            numberOfElementPerPage:
+                this.paginationSnapshot.numberOfElementPerPage,
             right: this.rightValue,
             first: this.firstValue,
             last: this.lastValue,
-            currentPageNumber: this.currentPageNumberValue
+            currentPageNumber: this.currentPageNumberValue,
         };
-
-    }
-
+    };
 }
-

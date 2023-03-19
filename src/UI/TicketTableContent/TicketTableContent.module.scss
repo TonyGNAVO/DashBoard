@@ -1,0 +1,41 @@
+.ticketTableContent{
+ margin-left: 3.1rem;
+}
+
+.ticketTableContent--fields{
+    display: flex;
+    align-items: start;
+    height: 3.0rem;
+    height: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.02rem;
+    color: #9FA2B4;
+    margin-bottom: 1.2rem ;
+    
+    :not(:last-child){
+        margin-right: 4rem;
+    }
+}
+.firstCol{
+    width: 44.0rem;
+}
+.secondCol{
+    width: 20.8rem;
+}
+
+.thirdCol{
+    width: 14rem;
+}
+.fourthCol{
+    width: 10.4rem;
+}
+.ticketTableContent--field{
+    text-align: left
+}
+
+.ticketTableContent--value{
+    background-color: red;
+}

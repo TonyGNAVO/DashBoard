@@ -1,0 +1,28 @@
+.ticketTableHeader{
+    margin: 3.2rem 3.2rem 4.8rem 3.2rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ticketTableHeader--title{
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.04rem;
+    color: #252733;
+
+    height: 2.4rem;
+}
+
+.ticketTableHeader--actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width:14.3rem ;
+    background-color: red;
+}

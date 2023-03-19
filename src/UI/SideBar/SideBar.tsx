@@ -1,9 +1,8 @@
-import sideBar from "./SideBar.module.scss"
-import Menu from "../Menu/Menu"
-import DashBoardIdentity from "../DashBoardIdentity/DashBoardIdentity"
+import sideBar from "./SideBar.module.scss";
+import Menu from "../Menu/Menu";
+import DashBoardIdentity from "../DashBoardIdentity/DashBoardIdentity";
 
 const SideBar = () => {
-
     return (
         <aside className={sideBar.sidebar}>
             <div className={sideBar.sidebarWrapper}>
@@ -11,7 +10,7 @@ const SideBar = () => {
                 <Menu />
             </div>
         </aside>
-    )
-}
+    );
+};
 
-export default SideBar
+export default SideBar;
