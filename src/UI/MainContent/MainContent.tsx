@@ -10,9 +10,7 @@ const MainContent = () => {
     return (
         <main className={MainContentCss.maincontent}>
             {tab === "overview" || !tab ? (
-                <>
-                    <OverviewContent />
-                </>
+                <OverviewContent />
             ) : tab === "tickets" ? (
                 <TicketsContent />
             ) : null}
