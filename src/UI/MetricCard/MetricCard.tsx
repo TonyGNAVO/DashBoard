@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MetricCardCss from "./MetricCard.module.scss";
+import MetricCardCss from "./style.module.scss";
 
 type MetricCardProps = { title: string; value: number };
 const MetricCard: FC<MetricCardProps> = ({ title, value }) => {

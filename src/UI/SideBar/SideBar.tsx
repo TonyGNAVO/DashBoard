@@ -1,4 +1,4 @@
-import sideBar from "./SideBar.module.scss";
+import sideBar from "./style.module.scss";
 import Menu from "../Menu/Menu";
 import DashBoardIdentity from "../DashBoardIdentity/DashBoardIdentity";
 

@@ -1,4 +1,4 @@
-import TasksCardCSS from "./TasksCard.module.scss";
+import TasksCardCSS from "./style.module.scss";
 import CreateIcon from "../../Images/CreateIcon.svg";
 import { TaskList } from "../TasksList/Tasks";
 import { useState } from "react";

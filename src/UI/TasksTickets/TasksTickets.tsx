@@ -1,4 +1,4 @@
-import TasksTicketsCss from "./TasksTickets.module.scss";
+import TasksTicketsCss from "./style.module.scss";
 import { Tickets } from "../Tickets/Tickets";
 import Tasks from "../Tasks/Tasks";
 import { TasksTicketsCard } from "../TasksTicketsCard/TasksTicketsCard";

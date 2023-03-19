@@ -1,4 +1,4 @@
-import DiagramCss from "./Diagram.module.scss";
+import DiagramCss from "./style.module.scss";
 import Graph from "./../../Images/Graph.png";
 const Diagram = () => {
     return (

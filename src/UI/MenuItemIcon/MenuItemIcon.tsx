@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MenuItemIconCss from "./MenuItemIcon.module.scss";
+import MenuItemIconCss from "./style.module.scss";
 
 type MenuItemIconProps = {
     text: string;

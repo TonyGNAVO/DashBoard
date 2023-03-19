@@ -1,4 +1,4 @@
-import ticketStatItemCss from "./TicketStatsItem.module.scss";
+import ticketStatItemCss from "./style.module.scss";
 import { FC } from "react";
 type props = { description: string; statValue: number };
 export const TicketStatsItem: FC<props> = ({ description, statValue }) => {

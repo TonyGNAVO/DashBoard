@@ -1,4 +1,4 @@
-import DashBoardIdentityCss from "./DashBoardIdentity.module.scss";
+import DashBoardIdentityCss from "./style.module.scss";
 import logo from "./../../Images/Logo.svg";
 const DashBoardIdentity = () => {
     return (

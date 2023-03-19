@@ -1,4 +1,4 @@
-import MenuItemCss from "./MenuItem.module.scss";
+import MenuItemCss from "./style.module.scss";
 import { Link } from "react-router-dom";
 import MenuItemIcon from "../MenuItemIcon/MenuItemIcon";
 import { FC } from "react";

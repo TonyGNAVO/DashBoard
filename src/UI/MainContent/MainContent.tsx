@@ -1,4 +1,4 @@
-import MainContentCss from "./MainContent.module.scss";
+import MainContentCss from "./style.module.scss";
 
 import MetricCards from "../MetricCards/MetricCards";
 import MetricsStats from "../MetricStats/MetricStats";

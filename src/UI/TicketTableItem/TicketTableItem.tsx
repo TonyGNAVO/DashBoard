@@ -1,4 +1,4 @@
-import Css from "./TicketTableItem.module.scss";
+import Css from "./style.module.scss";
 
 export const TicketTableItem = () => {
     return (

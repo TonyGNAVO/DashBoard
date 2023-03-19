@@ -1,4 +1,4 @@
-import TicketsCardCss from "./TicketsCard.module.scss";
+import TicketsCardCss from "./style.module.scss";
 import { TicketStatsItem } from "../TicketStatsItem/TicketStatsItem";
 
 type TicketStatsItemType = {

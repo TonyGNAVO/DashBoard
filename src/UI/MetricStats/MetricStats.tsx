@@ -1,4 +1,4 @@
-import MetricStatsCss from "./MetricStats.module.scss";
+import MetricStatsCss from "./style.module.scss";
 import Diagram from "../Diagram/Diagram";
 import MetricStatItem from "../App/MetricStatItem/MetricStatItem";
 

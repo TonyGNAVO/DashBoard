@@ -1,4 +1,4 @@
-import MetricCardCss from "./MetricCards.module.scss";
+import MetricCardCss from "./style.module.scss";
 import MetricCard from "../MetricCard/MetricCard";
 
 type cardProps = { id: number; title: string; value: number };

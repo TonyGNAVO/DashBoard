@@ -1,4 +1,4 @@
-import TaskCss from "./Task.module.scss";
+import TaskCss from "./style.module.scss";
 import { FC } from "react";
 import { TaskStatusEnum } from "./TaskStatusEnum";
 import CheckBox from "../../Images/CheckBox.svg";

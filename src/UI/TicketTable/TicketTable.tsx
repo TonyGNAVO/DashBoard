@@ -1,4 +1,4 @@
-import TicketTableCss from "./TicketTable.module.scss";
+import TicketTableCss from "./style.module.scss";
 import { TicketTableHeader } from "../TicketTableHeader/TicketTableHeader";
 import { TicketTableContent } from "../TicketTableContent/TicketTableContent";
 export const TicketTable = () => {

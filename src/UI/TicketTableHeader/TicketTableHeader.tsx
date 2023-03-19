@@ -1,4 +1,4 @@
-import TicketTableHeaderCss from "./TicketTableHeader.module.scss";
+import TicketTableHeaderCss from "./style.module.scss";
 export const TicketTableHeader = () => {
     return (
         <div className={TicketTableHeaderCss.ticketTableHeader}>
