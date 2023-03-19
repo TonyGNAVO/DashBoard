@@ -5,8 +5,5 @@ type Props = { children: JSX.Element };
 console.log(Css);
 
 export const TasksTicketsCard: FC<Props> = ({ children }) => {
-    return (
-        <div className={Css.tasksTicketsCard}>
-            {children}
-        </div>);
+    return <div className={Css.tasksTicketsCard}>{children}</div>;
 };
