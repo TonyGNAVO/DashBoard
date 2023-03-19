@@ -4,6 +4,8 @@ import MetricCards from "../MetricCards/MetricCards";
 import MetricsStats from "../MetricStats/MetricStats";
 import TasksTickets from "../TasksTickets/TasksTickets";
 import { TicketTable } from "../TicketTable/TicketTable";
+import { TicketTableHeader } from "../TicketTableHeader/TicketTableHeader";
+import { TicketTableContent } from "../TicketTableContent/TicketTableContent";
 
 import { useParams } from "react-router-dom";
 
@@ -18,7 +20,10 @@ const MainContent = () => {
                     <TasksTickets />
                 </>
             ) : tab === "tickets" ? (
-                <TicketTable />
+                <TicketTable>
+                    <TicketTableHeader />
+                    <TicketTableContent />
+                </TicketTable>
             ) : null}
         </main>
     );

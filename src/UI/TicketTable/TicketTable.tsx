@@ -1,11 +1,11 @@
 import TicketTableCss from "./style.module.scss";
-import { TicketTableHeader } from "../TicketTableHeader/TicketTableHeader";
-import { TicketTableContent } from "../TicketTableContent/TicketTableContent";
-export const TicketTable = () => {
+import { FC } from "react";
+
+type Props = { children: JSX.Element[] }
+export const TicketTable: FC<Props> = ({ children }) => {
     return (
         <div className={TicketTableCss.ticketTable}>
-            <TicketTableHeader />
-            <TicketTableContent />
+            {children}
         </div>
     );
 };
