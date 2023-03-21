@@ -1,16 +1,21 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store";
+
 import "./Reset.module.scss";
 import DashBoard from "../DashBoard/DashBoard";
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<DashBoard />} />
-                <Route path="/:tab" element={<DashBoard />} />
-            </Routes>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<DashBoard />} />
+                    <Route path="/:tab" element={<DashBoard />} />
+                </Routes>
+            </BrowserRouter>
+        </Provider>
     );
 };
 

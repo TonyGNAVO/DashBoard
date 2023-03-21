@@ -9,5 +9,5 @@
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["src/**/*.tsx", "global.d.ts"]
+    "include": ["src/**/*.tsx", "global.d.ts", "src/**/*.ts"]
 }

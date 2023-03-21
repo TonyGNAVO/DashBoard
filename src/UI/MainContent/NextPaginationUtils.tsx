@@ -1,8 +1,8 @@
-export const getNewPageNumber = (currentPageNumber: number): number => {
+export const getNextPage = (currentPageNumber: number): number => {
     return currentPageNumber + 1;
 };
 
-export const getNumberFinaElementOfTheNewpage = (
+export const getNextLast = (
     numberOfItemPerPage: number,
     currentPageNumber: number,
     numberOfElement: number
@@ -15,7 +15,7 @@ export const getNumberFinaElementOfTheNewpage = (
     return nextPageNumber * numberOfItemPerPage;
 };
 
-export const isPageAdanceAbleToBeDisable = (
+export const getNextIsRightEnable = (
     currentPageNumber: number,
     lastPageNumber: number
 ): boolean => {
@@ -24,13 +24,12 @@ export const isPageAdanceAbleToBeDisable = (
     }
     return true;
 };
-export const getNumberOfFirstElementOfTheNewpage = (
+export const getNextFirst = (
     numberOfItemPerPage: number,
     currentPageNumber: number
 ): number => {
     return 1 + currentPageNumber * numberOfItemPerPage;
 };
-
 const isAbleToBeValid = (currentPageNumber: number, lastPageNumber: number) => {
     return (
         lastPageNumber - currentPageNumber === 1 ||

@@ -1,6 +1,6 @@
 import MetricStatsCss from "./style.module.scss";
 import Diagram from "../Diagram/Diagram";
-import MetricStatItem from "../App/MetricStatItem/MetricStatItem";
+import MetricStatItem from "../MetricStatItem/MetricStatItem";
 
 type MetricStatItemProps = { id: number; title: string; value: string };
 
