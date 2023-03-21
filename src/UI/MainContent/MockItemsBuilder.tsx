@@ -1,9 +1,7 @@
-
-import { Ticket } from "../../Domain/Core/Entities/Ticket"
+import { Ticket } from "../../Domain/Core/Entities/Ticket";
 import { TicketPriorityEnum } from "../../Domain/Core/Entities/Ticket";
 
-
-type ticketBuilderType = (numberTickets: number) => Ticket[]
+type ticketBuilderType = (numberTickets: number) => Ticket[];
 
 export const createRandomTicketsBuilder = (): ticketBuilderType => {
     let id = 1;
@@ -15,30 +13,25 @@ export const createRandomTicketsBuilder = (): ticketBuilderType => {
                 ticketDetails: "",
                 customerName: "",
                 date: "",
-                priority: TicketPriorityEnum.LOW
-
-            }
-            tickets.push(ticket)
-            id++
+                priority: TicketPriorityEnum.LOW,
+            };
+            tickets.push(ticket);
+            id++;
         }
         return tickets;
-    }
+    };
 
     return createTickets;
-}
-
+};
 
 export const builTicketsByIds = (tab: number[]): Ticket[] => {
-
-    return tab.map(num => {
+    return tab.map((num) => {
         return {
             id: num,
             ticketDetails: "",
             customerName: "",
             date: "",
-            priority: TicketPriorityEnum.LOW
-
-        }
-    })
-
-}
+            priority: TicketPriorityEnum.LOW,
+        };
+    });
+};

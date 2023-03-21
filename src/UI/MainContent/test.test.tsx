@@ -282,7 +282,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 2,
                 lastPage: 3,
                 items: createRandomTicketsBuilder()(5),
-                selectedItems: []
+                selectedItems: [],
             },
         };
 
@@ -299,7 +299,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 2,
                 lastPage: 3,
                 items: createRandomTicketsBuilder()(5),
-                selectedItems: builTicketsByIds([3, 4])
+                selectedItems: builTicketsByIds([3, 4]),
             },
         });
     });
@@ -316,7 +316,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 2,
                 lastPage: 4,
                 items: createRandomTicketsBuilder()(7),
-                selectedItems: []
+                selectedItems: [],
             },
         };
 
@@ -333,7 +333,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 2,
                 lastPage: 4,
                 items: createRandomTicketsBuilder()(7),
-                selectedItems: builTicketsByIds([5, 6])
+                selectedItems: builTicketsByIds([5, 6]),
             },
         });
     });
@@ -350,7 +350,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 3,
                 lastPage: 4,
                 items: createRandomTicketsBuilder()(11),
-                selectedItems: []
+                selectedItems: [],
             },
         };
 
@@ -367,7 +367,7 @@ describe("Get the new Pagination from current pagination", () => {
                 numberPerPage: 3,
                 lastPage: 4,
                 items: createRandomTicketsBuilder()(11),
-                selectedItems: builTicketsByIds([10, 11])
+                selectedItems: builTicketsByIds([10, 11]),
             },
         });
     });
