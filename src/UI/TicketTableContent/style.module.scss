@@ -2,8 +2,10 @@
 
  width: 100%;
 }
-
 .ticketTableContent--fields{
+    border-bottom:0.15rem solid #DFE0EB;
+}
+.ticketTableContent--fields--wrapper{
     display: flex;
     align-items: start;
     height: 3.0rem;

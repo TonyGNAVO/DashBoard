@@ -1,6 +1,5 @@
 import { PaginationPresenter } from "./PaginationPresenter";
 import { Pagination } from "../UI/MainContent/Pagination";
-import CSS from 'csstype';
 import { Ticket } from "../Domain/Core/Entities/Ticket";
 
 export type footerType = {

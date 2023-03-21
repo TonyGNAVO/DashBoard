@@ -4,8 +4,8 @@ import { TicketTableItem } from "../TicketTableItem/TicketTableItem";
 export const TicketTableContent = () => {
     return (
         <table className={TicketTableContentCss.ticketTableContent}>
-            <thead>
-                <tr className={TicketTableContentCss.ticketTableContentFields}>
+            <thead className={TicketTableContentCss.ticketTableContentFields}>
+                <tr className={TicketTableContentCss.ticketTableContentFieldsWrapper}>
                     <th
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.firstCol}`}
                     >
