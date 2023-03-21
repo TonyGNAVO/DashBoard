@@ -1,12 +1,16 @@
 export type Pagination<ItemType> = {
+    last: number;
+    right: boolean;
+    lastPage: number;
+    number: number;
+    numberPerPage: number;
     page: number;
     left: boolean;
-    right: boolean;
+
     first: number;
-    last: number;
-    numberPerPage: number;
-    number: number;
-    lastPage: number;
-    items: ItemType[];
+
+    //facile a calculé
+
     selectedItems: ItemType[];
+    items: ItemType[];
 };

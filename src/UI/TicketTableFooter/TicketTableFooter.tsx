@@ -1,27 +1,22 @@
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../App/store";
-// import { nextPage } from "../../Domain/UseCases/UpdatingPagination";
+import { FooterPaginationPresenter } from "../../Presenters/FooterPaginationPresenter";
+
 import Css from "./style.module.scss";
+import { footerType } from "../../Presenters/FooterPaginationPresenter";
+
 import { Pagination } from "../MainContent/Pagination";
 import { Ticket } from "../../Domain/Core/Entities/Ticket";
-
-import paginationReducer, {
-    nextPage,
-} from "../../Domain/UseCases/UpdatingPagination";
+import { nextPage } from "../../Domain/UseCases/UpdatingPagination";
 
 export const TicketTableFooter = () => {
     const dispatch = useDispatch();
 
-    const count: Pagination = useSelector(
+    const pagination: Pagination<Ticket> = useSelector(
         (state: RootState) => state.pagination.value
-    );
-    const tik: Ticket[] = useSelector(
-        (state: RootState) => state.tickets.value
-    );
-
-    console.log(count);
-    console.log(tik);
-
+    )
+    const footer = new FooterPaginationPresenter().present(pagination);
+    console.log(footer)
     return (
         <div className={Css.ticketTableFooter}>
             <button
@@ -29,7 +24,7 @@ export const TicketTableFooter = () => {
                 onClick={(e) => {
                     dispatch(nextPage());
                 }}
-            ></button>
+            > Bonsoir</button>
         </div>
     );
 };

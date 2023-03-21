@@ -14,5 +14,5 @@ export class TicketPriorityEnum {
     private constructor(
         readonly backgroundColor: string,
         readonly name: string
-    ) {}
+    ) { }
 }

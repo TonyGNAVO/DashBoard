@@ -36,3 +36,41 @@ const isAbleToBeValid = (currentPageNumber: number, lastPageNumber: number) => {
         (currentPageNumber === 1 && lastPageNumber === 1)
     );
 };
+
+//  Initial
+export const getInitialLast = (
+    numberPerPage: number,
+    number: number
+): number => {
+    if (number > numberPerPage) {
+        return numberPerPage;
+    }
+    return number;
+};
+
+export const getInitialRight = (
+    numberPerPage: number,
+    number: number
+): boolean => {
+    if (number > numberPerPage) {
+        return true;
+    }
+    return false;
+};
+
+export const getInitialLastPage = (
+    numberPerPage: number,
+    number: number
+): number => {
+    if (number > numberPerPage) {
+        return Math.floor(number / numberPerPage) + 1;
+    }
+    return 1;
+};
+
+export const getInitialFirst = (number: number): number => {
+    if (number >= 1) {
+        return 1;
+    }
+    return 0;
+};
