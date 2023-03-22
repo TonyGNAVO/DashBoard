@@ -17,7 +17,7 @@ const pagination: Pagination<Ticket> = {
     number: 0,
     numberPerPage: 0,
     lastPage: 0,
-    items: createRandomTicketsBuilder()(47),
+    items: createRandomTicketsBuilder()(97),
     selectedItems: [],
 };
 

@@ -1,4 +1,3 @@
-
 import { Ticket } from "../Domain/Core/Entities/Ticket";
 import { Pagination } from "../UI/MainContent/Pagination";
 

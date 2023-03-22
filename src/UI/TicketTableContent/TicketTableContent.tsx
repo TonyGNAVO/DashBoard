@@ -1,11 +1,16 @@
 import TicketTableContentCss from "./style.module.scss";
+import { TicketTableList } from "../TicketTableList/TicketTableList";
 
 import { TicketTableItem } from "../TicketTableItem/TicketTableItem";
 export const TicketTableContent = () => {
     return (
         <table className={TicketTableContentCss.ticketTableContent}>
             <thead className={TicketTableContentCss.ticketTableContentFields}>
-                <tr className={TicketTableContentCss.ticketTableContentFieldsWrapper}>
+                <tr
+                    className={
+                        TicketTableContentCss.ticketTableContentFieldsWrapper
+                    }
+                >
                     <th
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.firstCol}`}
                     >
@@ -29,14 +34,7 @@ export const TicketTableContent = () => {
                 </tr>
             </thead>
             <tbody>
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
-                <TicketTableItem />
+                <TicketTableList />
             </tbody>
         </table>
     );
