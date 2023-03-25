@@ -3,7 +3,9 @@
  width: 100%;
 }
 .ticketTableContent--fields{
+    display: block;
     border-bottom:0.15rem solid #DFE0EB;
+    
 }
 .ticketTableContent--fields--wrapper{
     display: flex;
@@ -20,9 +22,6 @@
     
     :not(:last-child){
         margin-right: 4rem;
-    }
-        :first-child{
-        margin-left: 3.1rem;
     }
 }
 .firstCol{

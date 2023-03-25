@@ -10,6 +10,12 @@ import {
     getInitialFirst,
 } from "./NextPaginationUtils";
 
+import {
+    getPreviousLast,
+    getPreviousFirst,
+    getPreviousLeft,
+} from "./previousPagination";
+
 import { Ticket } from "../../Domain/Core/Entities/Ticket";
 export class PaginationBuilder {
     private paginationSnapshot: Pagination<Ticket>;
@@ -18,6 +24,42 @@ export class PaginationBuilder {
         this.paginationSnapshot = pagination;
     }
 
+    private selectItems(
+        tickets: Ticket[],
+        first: number,
+        last: number
+    ): Ticket[] {
+        return tickets.slice(first - 1, last);
+    }
+    buildPreviousPagination = (): Pagination<Ticket> => {
+        const page = this.paginationSnapshot.page - 1;
+        const last = getPreviousLast(
+            this.paginationSnapshot.page,
+            this.paginationSnapshot.numberPerPage
+        );
+        const first = getPreviousFirst(
+            this.paginationSnapshot.page,
+            this.paginationSnapshot.numberPerPage
+        );
+        const left = getPreviousLeft(this.paginationSnapshot.page);
+        const selectedItems = this.selectItems(
+            this.paginationSnapshot.items,
+            first,
+            last
+        );
+        return {
+            last,
+            first,
+            page,
+            left,
+            right: true,
+            selectedItems,
+            lastPage: this.paginationSnapshot.lastPage,
+            number: this.paginationSnapshot.number,
+            numberPerPage: this.paginationSnapshot.numberPerPage,
+            items: this.paginationSnapshot.items,
+        };
+    };
     buildInitialPagination = (): Pagination<Ticket> => {
         const numberPerPage = 8;
         const page = 1;
@@ -27,8 +69,9 @@ export class PaginationBuilder {
         const lastPage = getInitialLastPage(numberPerPage, number);
         const left = false;
         const first = getInitialFirst(number);
-        const selectedItems = this.paginationSnapshot.items.slice(
-            first - 1,
+        const selectedItems = this.selectItems(
+            this.paginationSnapshot.items,
+            first,
             last
         );
         const items = this.paginationSnapshot.items;
@@ -48,32 +91,33 @@ export class PaginationBuilder {
     };
 
     buildNextPagination = (): Pagination<Ticket> => {
-        const nextFirst = getNextFirst(
+        const first = getNextFirst(
             this.paginationSnapshot.numberPerPage,
             this.paginationSnapshot.page
         );
 
-        const newRight = getNextIsRightEnable(
+        const right = getNextIsRightEnable(
             this.paginationSnapshot.page,
             this.paginationSnapshot.lastPage
         );
 
-        const nextLast = getNextLast(
+        const last = getNextLast(
             this.paginationSnapshot.numberPerPage,
             this.paginationSnapshot.page,
             this.paginationSnapshot.number
         );
 
-        const nextPage = getNextPage(this.paginationSnapshot.page);
+        const page = getNextPage(this.paginationSnapshot.page);
 
         return {
-            right: newRight,
-            first: nextFirst,
-            last: nextLast,
-            page: nextPage,
-            selectedItems: this.paginationSnapshot.items.slice(
-                nextFirst - 1,
-                nextLast
+            right,
+            first,
+            last,
+            page,
+            selectedItems: this.selectItems(
+                this.paginationSnapshot.items,
+                first,
+                last
             ),
             left: true,
             number: this.paginationSnapshot.number,

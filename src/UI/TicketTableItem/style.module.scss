@@ -2,3 +2,57 @@
         width: 100%;
         border-bottom: 0.1rem solid #DFE0EB;
     }
+
+    tr{
+        width: 100%;
+        height: 100%;
+        display: flex;
+       padding-left: 3.1rem;
+        :not(:last-child){
+            margin-right: 4rem;
+        }
+        align-items: center;
+    }
+    .firstCol{
+        width:44.0rem;
+        display:flex;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+    }
+    .secondCol{
+        width: 20.8rem;
+        background-color: aqua;
+        display:block;
+        height: 100%;
+        display:inline-flex;
+        align-items: center;
+    }
+    
+    .thirdCol{
+        width: 14rem;
+        background-color: blue;
+        display: block;
+        height: 100%;
+        display:inline-flex;
+        align-items: center;
+    }
+    .fourthCol{
+        width: 10.4rem;
+        background-color: forestgreen;
+        display: block;
+        height: 100%;
+        display:inline-flex;
+        align-items: center;
+    }
+
+    .ticketTableItem--profil{
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .ticketTableItem--profil--img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }

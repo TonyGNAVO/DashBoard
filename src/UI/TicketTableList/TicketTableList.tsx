@@ -1,7 +1,7 @@
 import Css from "./style.module.scss";
 
 import { TicketTableItem } from "../TicketTableItem/TicketTableItem";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../App/store";
 import { TicketItemPaginationPresenter } from "../../Presenters/TicketItemPaginationPresenter";
 import { Pagination } from "../MainContent/Pagination";
@@ -15,8 +15,12 @@ export const TicketTableList = () => {
 
     return (
         <>
-            {ticketTable.selectedItems.map((item) => (
-                <TicketTableItem key={item.id} style={ticketTable.itemStyle} />
+            {ticketTable.selectedItems.map((ticket) => (
+                <TicketTableItem
+                    ticket={ticket}
+                    key={ticket.id}
+                    style={ticketTable}
+                />
             ))}
         </>
     );

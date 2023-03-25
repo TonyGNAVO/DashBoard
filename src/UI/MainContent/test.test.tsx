@@ -291,7 +291,7 @@ describe("Get the new Pagination from current pagination", () => {
         expect(nextPagination).toEqual({
             value: {
                 page: 2,
-                left: false,
+                left: true,
                 right: true,
                 first: 3,
                 last: 4,
@@ -325,7 +325,7 @@ describe("Get the new Pagination from current pagination", () => {
         expect(nextPagination).toEqual({
             value: {
                 page: 3,
-                left: false,
+                left: true,
                 right: true,
                 first: 5,
                 last: 6,
@@ -359,7 +359,7 @@ describe("Get the new Pagination from current pagination", () => {
         expect(nextPagination).toEqual({
             value: {
                 page: 4,
-                left: false,
+                left: true,
                 right: false,
                 first: 10,
                 last: 11,

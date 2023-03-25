@@ -5,7 +5,10 @@ import type { RootState } from "../App/store";
 import { FooterPaginationPresenter } from "../../Presenters/FooterPaginationPresenter";
 import { Pagination } from "../MainContent/Pagination";
 import { Ticket } from "../../Domain/Core/Entities/Ticket";
-import { nextPage } from "../../Domain/UseCases/UpdatingPagination";
+import {
+    nextPage,
+    previousPage,
+} from "../../Domain/UseCases/UpdatingPagination";
 import numPage from "../../Images/numPage.svg";
 import left from "../../Images/left.svg";
 import right from "../../Images/right.svg";
@@ -36,7 +39,9 @@ export const TicketTableFooter = () => {
                         className={Css.ticketTableFooterElementValue}
                     >{`${footer.first}-${footer.last} of ${footer.number}`}</p>
                     <figure
+                        style={{ display: footer.left ? "flex" : "none" }}
                         className={`${Css.ticketTableFooterElementMedia} ${Css.ticketTableFooterElementLeftMedia}`}
+                        onClick={(e) => dispatch(previousPage())}
                     >
                         <img
                             className={Css.ticketTableFooterElementMediaImg}

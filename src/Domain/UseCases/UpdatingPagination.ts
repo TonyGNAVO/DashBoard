@@ -37,10 +37,15 @@ export const PaginationSlice = createSlice({
                 paginationState.value
             ).buildNextPagination();
         },
+        previousPage: (paginationState: PaginationState) => {
+            paginationState.value = new PaginationBuilder(
+                paginationState.value
+            ).buildPreviousPagination();
+        },
     },
 });
 
 //To do
-export const { nextPage } = PaginationSlice.actions;
+export const { nextPage, previousPage } = PaginationSlice.actions;
 
 export default PaginationSlice.reducer;

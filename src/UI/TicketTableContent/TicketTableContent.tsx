@@ -1,7 +1,5 @@
 import TicketTableContentCss from "./style.module.scss";
 import { TicketTableList } from "../TicketTableList/TicketTableList";
-
-import { TicketTableItem } from "../TicketTableItem/TicketTableItem";
 export const TicketTableContent = () => {
     return (
         <table className={TicketTableContentCss.ticketTableContent}>
@@ -11,22 +9,22 @@ export const TicketTableContent = () => {
                         TicketTableContentCss.ticketTableContentFieldsWrapper
                     }
                 >
-                    <th
+                    <th id="th1"
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.firstCol}`}
                     >
                         Ticket details
                     </th>
-                    <th
+                    <th id="th2"
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.secondCol}`}
                     >
                         Customer name
                     </th>
-                    <th
+                    <th id="th3"
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.thirdCol}`}
                     >
                         Date
                     </th>
-                    <th
+                    <th id="th4"
                         className={`${TicketTableContentCss.ticketTableContentField} ${TicketTableContentCss.fourthCol}`}
                     >
                         Priority
