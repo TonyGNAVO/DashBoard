@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createRandomTicketsBuilder } from "../Domain/UseCases/MockItemsBuilder";
+import { createTicketsBuilder } from "../Domain/UseCases/MockItemsBuilder";
 import { builTicketsByIds } from "../Domain/UseCases/MockItemsBuilder";
 import paginationReducer, {
     nextPage,
@@ -281,7 +281,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 5,
                 numberPerPage: 2,
                 lastPage: 3,
-                items: createRandomTicketsBuilder()(5),
+                items: createTicketsBuilder()(5),
                 selectedItems: [],
             },
         };
@@ -298,7 +298,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 5,
                 numberPerPage: 2,
                 lastPage: 3,
-                items: createRandomTicketsBuilder()(5),
+                items: createTicketsBuilder()(5),
                 selectedItems: builTicketsByIds([3, 4]),
             },
         });
@@ -315,7 +315,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 7,
                 numberPerPage: 2,
                 lastPage: 4,
-                items: createRandomTicketsBuilder()(7),
+                items: createTicketsBuilder()(7),
                 selectedItems: [],
             },
         };
@@ -332,7 +332,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 7,
                 numberPerPage: 2,
                 lastPage: 4,
-                items: createRandomTicketsBuilder()(7),
+                items: createTicketsBuilder()(7),
                 selectedItems: builTicketsByIds([5, 6]),
             },
         });
@@ -349,7 +349,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 11,
                 numberPerPage: 3,
                 lastPage: 4,
-                items: createRandomTicketsBuilder()(11),
+                items: createTicketsBuilder()(11),
                 selectedItems: [],
             },
         };
@@ -366,7 +366,7 @@ describe("Get the new Pagination from current pagination", () => {
                 number: 11,
                 numberPerPage: 3,
                 lastPage: 4,
-                items: createRandomTicketsBuilder()(11),
+                items: createTicketsBuilder()(11),
                 selectedItems: builTicketsByIds([10, 11]),
             },
         });

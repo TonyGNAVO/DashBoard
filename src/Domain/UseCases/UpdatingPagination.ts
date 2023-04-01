@@ -2,7 +2,7 @@ import { PayloadAction , createSlice } from "@reduxjs/toolkit";
 import { Pagination } from "../Core/Entities/Pagination";
 import { PaginationBuilder } from "./PaginationBuilder";
 import { Ticket } from "../Core/Entities/Ticket";
-import { createRandomTicketsBuilder } from "./MockItemsBuilder";
+import { createTicketsBuilder,createRandomTicketsBuilder } from "./MockItemsBuilder";
 
 interface PaginationState {
     value: Pagination<Ticket>;
@@ -17,7 +17,7 @@ const pagination: Pagination<Ticket> = {
     number: 0,
     numberPerPage: 0,
     lastPage: 0,
-    items: createRandomTicketsBuilder()(97),
+    items: createRandomTicketsBuilder(97),
     selectedItems: [],
 };
 
@@ -26,11 +26,8 @@ const initialState: PaginationState = {
 };
 
 export const PaginationSlice = createSlice({
-    // Todo
     name: "pagination",
     initialState,
-
-    // To do
     reducers: {
         nextPage: (paginationState: PaginationState) => {
             paginationState.value = new PaginationBuilder(

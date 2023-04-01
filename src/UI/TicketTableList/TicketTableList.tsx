@@ -12,7 +12,7 @@ export const TicketTableList = () => {
         (state: RootState) => state.pagination.value
     );
     const ticketTable = new TicketItemPaginationPresenter().present(pagination);
-
+    console.log(ticketTable.selectedItems)
     return (
         <>
             {ticketTable.selectedItems.map((ticket) => (

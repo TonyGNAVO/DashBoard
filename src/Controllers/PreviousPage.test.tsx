@@ -8,7 +8,7 @@ import paginationReducer, {
 } from "../Domain/UseCases/UpdatingPagination";
 import { describe, it, expect } from "vitest";
 import {
-    createRandomTicketsBuilder,
+    createTicketsBuilder,
     builTicketsByIds,
 } from "../Domain/UseCases/MockItemsBuilder";
 
@@ -122,7 +122,7 @@ describe("", () => {
                 number: 11,
                 numberPerPage: 8,
                 lastPage: 2,
-                items: createRandomTicketsBuilder()(11),
+                items: createTicketsBuilder()(11),
                 selectedItems: [],
             },
         };
@@ -139,7 +139,7 @@ describe("", () => {
                 number: 11,
                 numberPerPage: 8,
                 lastPage: 2,
-                items: createRandomTicketsBuilder()(11),
+                items: createTicketsBuilder()(11),
                 selectedItems: builTicketsByIds([1, 2, 3, 4, 5, 6, 7, 8]),
             },
         });
@@ -156,7 +156,7 @@ describe("", () => {
                 number: 19,
                 numberPerPage: 8,
                 lastPage: 3,
-                items: createRandomTicketsBuilder()(19),
+                items: createTicketsBuilder()(19),
                 selectedItems: [],
             },
         };
@@ -173,7 +173,7 @@ describe("", () => {
                 number: 19,
                 numberPerPage: 8,
                 lastPage: 3,
-                items: createRandomTicketsBuilder()(19),
+                items: createTicketsBuilder()(19),
                 selectedItems: builTicketsByIds([
                     9, 10, 11, 12, 13, 14, 15, 16,
                 ]),

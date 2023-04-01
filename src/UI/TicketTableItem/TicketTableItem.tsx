@@ -17,13 +17,13 @@ export const TicketTableItem: FC<Props> = ({ style, ticket }) => {
                     <img src={p1} alt="Profil" className={Css.ticketTableItemProfilImg} />
                 </div>
                 <div className={Css.ticketTableItemDetails}>
-                    <p className={Css.ticketTableItemDetailsDescription}>Contact Email not Linked</p>
-                    <p className={Css.ticketTableItemDetailsUpdate}>Updated 1 day ago</p>
+                    <p className={Css.ticketTableItemDetailsDescription}>{ticket.ticketDetails}</p>
+                    <p className={Css.ticketTableItemDetailsUpdate}>Updated {ticket.ticketDetailsUpdate} day ago</p>
                 </div>
             </td>
             <td className={Css.secondCol}>
                 <div className={Css.ticketTableItemName}>
-                    <p className={Css.ticketTableItemNameValue}>Tom Cruise</p>
+                    <p className={Css.ticketTableItemNameValue}>{ticket.customerName}</p>
                     <p className={Css.ticketTableItemNameDate}>on 24.05.2019</p>
                 </div>
             </td>
@@ -35,7 +35,7 @@ export const TicketTableItem: FC<Props> = ({ style, ticket }) => {
                 </div>
             </td>
             <td className={Css.fourthCol}>
-                <div className={Css.ticketTableItemPriorityLabel}>HIGH</div>
+                <div className={Css.ticketTableItemPriorityLabel} style={{ backgroundColor: ticket.priority.backgroundColor }}>{ticket.priority.name}</div>
             </td>
         </tr>
     );

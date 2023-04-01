@@ -5,7 +5,7 @@ import {
     getInitialFirst,
 } from "../Domain/UseCases/NextPaginationUtils";
 import {
-    createRandomTicketsBuilder,
+    createTicketsBuilder,
     builTicketsByIds,
 } from "../Domain/UseCases/MockItemsBuilder";
 import { PaginationBuilder } from "../Domain/UseCases/PaginationBuilder";
@@ -174,7 +174,7 @@ describe("Get the right initial Pagination", () => {
                 number: 0,
                 numberPerPage: 0,
                 lastPage: 0,
-                items: createRandomTicketsBuilder()(0),
+                items: createTicketsBuilder()(0),
                 selectedItems: [],
             },
         };
@@ -208,7 +208,7 @@ describe("Get the right initial Pagination", () => {
                 number: 0,
                 numberPerPage: 0,
                 lastPage: 1,
-                items: createRandomTicketsBuilder()(1),
+                items: createTicketsBuilder()(1),
                 selectedItems: [],
             },
         };
@@ -226,7 +226,7 @@ describe("Get the right initial Pagination", () => {
             number: 1,
             numberPerPage: 8,
             lastPage: 1,
-            items: createRandomTicketsBuilder()(1),
+            items: createTicketsBuilder()(1),
             selectedItems: builTicketsByIds([1]),
         });
     });
@@ -242,7 +242,7 @@ describe("Get the right initial Pagination", () => {
                 number: 0,
                 numberPerPage: 0,
                 lastPage: 0,
-                items: createRandomTicketsBuilder()(17),
+                items: createTicketsBuilder()(17),
                 selectedItems: [],
             },
         };
@@ -260,7 +260,7 @@ describe("Get the right initial Pagination", () => {
             number: 17,
             numberPerPage: 8,
             lastPage: 3,
-            items: createRandomTicketsBuilder()(17),
+            items: createTicketsBuilder()(17),
             selectedItems: builTicketsByIds([1, 2, 3, 4, 5, 6, 7, 8]),
         });
     });
