@@ -44,3 +44,9 @@
 .ticketTableContent--value{
     background-color: red;
 }
+
+tbody{
+   height: 73.6rem;
+    display: block;
+    overflow-y: auto;
+}

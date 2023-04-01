@@ -22,25 +22,19 @@
     }
     .secondCol{
         width: 20.8rem;
-        background-color: aqua;
-        display:block;
         height: 100%;
         display:inline-flex;
         align-items: center;
     }
     
     .thirdCol{
-        width: 14rem;
-        background-color: blue;
-        display: block;
+        width:14rem;
         height: 100%;
         display:inline-flex;
         align-items: center;
     }
     .fourthCol{
         width: 10.4rem;
-        background-color: forestgreen;
-        display: block;
         height: 100%;
         display:inline-flex;
         align-items: center;
@@ -49,10 +43,115 @@
     .ticketTableItem--profil{
         overflow: hidden;
         border-radius: 50%;
+        width: 4.4rem;
+        height: 4.4rem;
     }
 
     .ticketTableItem--profil--img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    .ticketTableItem-details{
+        height: 4.0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .ticketTableItem-details--description{
+        height: 2rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.02rem;
+        color: #252733;
+    }
+
+    .ticketTableItem-details--update{
+        height: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.01rem;
+        color: #C5C7CD;
+        
+    }
+
+
+    .ticketTableItem-name{
+        height: 4.0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ticketTableItem-name--value{
+        height: 2rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.02rem;
+        color: #252733;
+    }
+
+    .ticketTableItem-name--date{
+        height: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.01rem;
+        color: #C5C7CD;
+        
+    }
+
+    .ticketTableItem--date{
+        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 14rem;
+
+    }
+
+    .ticketTableItem--date--day{
+        height: 2rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.02rem;
+        color: #252733;
+    }
+
+    .ticketTableItem--date--hour{
+        height: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.01rem;
+        color: #C5C7CD;
+        
+    }
+
+    .ticketTableItem--priorityLabel{
+        padding: 0.5rem 1.2rem;
+        background: #F12B2C;
+        border-radius: 10rem;
+        position: absolute;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
     }
