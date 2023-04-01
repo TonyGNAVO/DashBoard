@@ -90,6 +90,37 @@ export class PaginationBuilder {
         };
     };
 
+    buildNewPerPagePagination = (num: number): Pagination<Ticket> => {
+        const numberPerPage = num;
+        const page = 1;
+        const number = this.paginationSnapshot.items.length;
+        const last = getInitialLast(numberPerPage, number);
+        const right = getInitialRight(numberPerPage, number);
+        const lastPage = getInitialLastPage(numberPerPage, number);
+        const left = false;
+        const first = getInitialFirst(number);
+        const selectedItems = this.selectItems(
+            this.paginationSnapshot.items,
+            first,
+            last
+        );
+        const items = this.paginationSnapshot.items;
+
+        return {
+            numberPerPage,
+            page,
+            number,
+            last,
+            right,
+            lastPage,
+            left,
+            first,
+            items,
+            selectedItems,
+        };
+    };
+
+
     buildNextPagination = (): Pagination<Ticket> => {
         const first = getNextFirst(
             this.paginationSnapshot.numberPerPage,

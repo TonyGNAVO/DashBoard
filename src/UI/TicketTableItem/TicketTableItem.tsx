@@ -10,7 +10,6 @@ type Props = {
     ticket: Ticket;
 };
 export const TicketTableItem: FC<Props> = ({ style, ticket }) => {
-    console.log(style)
     return (
         <tr className={Css.ticketTableItem} style={style.itemStyle}>
             <td className={Css.firstCol} >

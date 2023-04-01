@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction , createSlice } from "@reduxjs/toolkit";
 import { Pagination } from "../../UI/MainContent/Pagination";
 import { PaginationBuilder } from "../../UI/MainContent/PaginationBuilder";
 import { Ticket } from "../Core/Entities/Ticket";
@@ -42,10 +42,14 @@ export const PaginationSlice = createSlice({
                 paginationState.value
             ).buildPreviousPagination();
         },
+        newNumberPerPage: (paginationState: PaginationState,action:PayloadAction<number>) => {
+            console.log(action.payload)
+            paginationState.value = new PaginationBuilder(pagination).buildNewPerPagePagination(action.payload)
+        },
     },
 });
 
 //To do
-export const { nextPage, previousPage } = PaginationSlice.actions;
+export const { nextPage, previousPage,newNumberPerPage } = PaginationSlice.actions;
 
 export default PaginationSlice.reducer;
