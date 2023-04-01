@@ -1,4 +1,4 @@
-import { Pagination } from "./Pagination";
+import { Pagination } from "../Core/Entities/Pagination";
 import { getNextIsRightEnable } from "./NextPaginationUtils";
 import {
     getNextFirst,
@@ -14,9 +14,9 @@ import {
     getPreviousLast,
     getPreviousFirst,
     getPreviousLeft,
-} from "./previousPagination";
+} from "./previousPaginationUtils";
 
-import { Ticket } from "../../Domain/Core/Entities/Ticket";
+import { Ticket } from "../Core/Entities/Ticket";
 export class PaginationBuilder {
     private paginationSnapshot: Pagination<Ticket>;
 

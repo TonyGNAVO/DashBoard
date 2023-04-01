@@ -4,7 +4,7 @@ import { TicketTableItem } from "../TicketTableItem/TicketTableItem";
 import { useSelector } from "react-redux";
 import { RootState } from "../App/store";
 import { TicketItemPaginationPresenter } from "../../Presenters/TicketItemPaginationPresenter";
-import { Pagination } from "../MainContent/Pagination";
+import { Pagination } from "../../Domain/Core/Entities/Pagination";
 import { Ticket } from "../../Domain/Core/Entities/Ticket";
 
 export const TicketTableList = () => {

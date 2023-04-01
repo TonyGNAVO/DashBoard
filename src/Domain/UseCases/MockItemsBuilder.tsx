@@ -1,5 +1,5 @@
-import { Ticket } from "../../Domain/Core/Entities/Ticket";
-import { TicketPriorityEnum } from "../../Domain/Core/Entities/Ticket";
+import { Ticket } from "../Core/Entities/Ticket";
+import { TicketPriorityEnum } from "../Core/Entities/Ticket";
 
 type ticketBuilderType = (numberTickets: number) => Ticket[];
 

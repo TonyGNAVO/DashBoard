@@ -2,15 +2,15 @@ import {
     getPreviousLast,
     getPreviousFirst,
     getPreviousLeft,
-} from "./previousPagination";
+} from "../Domain/UseCases/previousPaginationUtils";
 import paginationReducer, {
     previousPage,
-} from "../../Domain/UseCases/UpdatingPagination";
+} from "../Domain/UseCases/UpdatingPagination";
 import { describe, it, expect } from "vitest";
 import {
     createRandomTicketsBuilder,
     builTicketsByIds,
-} from "./MockItemsBuilder";
+} from "../Domain/UseCases/MockItemsBuilder";
 
 describe("Get the new last number of the page after ask the previous Page", () => {
     it("x ", () => {

@@ -3,7 +3,7 @@ import Css from "./style.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../App/store";
 import { FooterPaginationPresenter } from "../../Presenters/FooterPaginationPresenter";
-import { Pagination } from "../MainContent/Pagination";
+import { Pagination } from "../../Domain/Core/Entities/Pagination";
 import { Ticket } from "../../Domain/Core/Entities/Ticket";
 import {
     nextPage,

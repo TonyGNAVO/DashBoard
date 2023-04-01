@@ -1,8 +1,8 @@
 import { PayloadAction , createSlice } from "@reduxjs/toolkit";
-import { Pagination } from "../../UI/MainContent/Pagination";
-import { PaginationBuilder } from "../../UI/MainContent/PaginationBuilder";
+import { Pagination } from "../Core/Entities/Pagination";
+import { PaginationBuilder } from "./PaginationBuilder";
 import { Ticket } from "../Core/Entities/Ticket";
-import { createRandomTicketsBuilder } from "../../UI/MainContent/MockItemsBuilder";
+import { createRandomTicketsBuilder } from "./MockItemsBuilder";
 
 interface PaginationState {
     value: Pagination<Ticket>;

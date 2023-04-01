@@ -3,12 +3,12 @@ import {
     getInitialRight,
     getInitialLastPage,
     getInitialFirst,
-} from "./NextPaginationUtils";
+} from "../Domain/UseCases/NextPaginationUtils";
 import {
     createRandomTicketsBuilder,
     builTicketsByIds,
-} from "./MockItemsBuilder";
-import { PaginationBuilder } from "./PaginationBuilder";
+} from "../Domain/UseCases/MockItemsBuilder";
+import { PaginationBuilder } from "../Domain/UseCases/PaginationBuilder";
 import { describe, it, expect } from "vitest";
 describe("Get the inial last number of the list", () => {
     it(" 2 , 0 => 0 : number less or equal than number per page", () => {

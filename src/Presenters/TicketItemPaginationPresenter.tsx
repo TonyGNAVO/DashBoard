@@ -1,5 +1,5 @@
 import { Ticket } from "../Domain/Core/Entities/Ticket";
-import { Pagination } from "../UI/MainContent/Pagination";
+import { Pagination } from "../Domain/Core/Entities/Pagination";
 import { PaginationPresenter } from "./PaginationPresenter";
 import CSS from "csstype";
 

@@ -1,15 +1,15 @@
 import { describe, it, expect } from "vitest";
-import { createRandomTicketsBuilder } from "./MockItemsBuilder";
-import { builTicketsByIds } from "./MockItemsBuilder";
+import { createRandomTicketsBuilder } from "../Domain/UseCases/MockItemsBuilder";
+import { builTicketsByIds } from "../Domain/UseCases/MockItemsBuilder";
 import paginationReducer, {
     nextPage,
-} from "../../Domain/UseCases/UpdatingPagination";
+} from "../Domain/UseCases/UpdatingPagination";
 import {
     getNextLast,
     getNextFirst,
     getNextIsRightEnable,
     getNextPage,
-} from "./NextPaginationUtils";
+} from "../Domain/UseCases/NextPaginationUtils";
 
 describe("Get the new page number after ask the next page", () => {
     it("should return when the current page Number is 1", () => {
