@@ -33,7 +33,7 @@ const Menu = () => {
     activeItem ? (activeItem.active = true) : null;
 
     return (
-        <div>
+        <>
             {menuItemProps.map((item) => (
                 <MenuItem
                     key={item.id}
@@ -51,7 +51,7 @@ const Menu = () => {
                     link={item.link}
                 />
             ))}
-        </div>
+        </>
     );
 };
 

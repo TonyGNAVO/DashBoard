@@ -8,6 +8,7 @@ responsive();
 const DashBoard = () => {
     return (
         <DashBoardWrapper>
+            {/* TODO REMETTRE*/}
             <SideBar />
             <Content />
         </DashBoardWrapper>

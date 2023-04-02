@@ -1,11 +1,35 @@
+
 .sidebar{
-    width: 25.5rem;
-    height:100%;
-    text-align: end;
-    background-color:  #363740;
+    background-color:rgba(54, 55, 64, 0.82);
+    display: block;
+    width: 90%;
+    margin: 0 5%;
+    position: fixed;
+    bottom: 0px;
+    padding: 1.8% 2%;
+    border-radius: 8px;
+    z-index: 10;
+
+}
+.sidebar--wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.sidebar--wrapper{
-
+@media screen and  (min-width: 1024px)  {
+    .sidebar{
+        position: fixed;
+        width: 25.5rem;
+        height:100%;
+        text-align: end;
+        background-color:  #363740;
+        display: block;
+        margin: 0 0;
+        position: static;
+        border-radius: 0;
+        padding: 0 ;
+    }
+    .sidebar--wrapper{
+        display: block;
+    }
 }

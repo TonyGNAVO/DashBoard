@@ -7,7 +7,7 @@ export const Content = () => {
         <div className={Css.sideLeftContent}>
             <div className={Css.sideLeftContentWrapper}>
                 <Header />
-                <MainContent />
+                {/* <MainContent /> */}
             </div>
         </div>
     );
