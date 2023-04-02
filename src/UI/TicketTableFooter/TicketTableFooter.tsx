@@ -27,22 +27,12 @@ export const TicketTableFooter = () => {
     }
 
     const numberPerPage: perPage[] = [{ id: 1, value: 4 }, { id: 2, value: 8 }, { id: 3, value: 12 }, { id: 4, value: 20 }, { id: 5, value: 50 }]
+
     return (
         <div className={Css.ticketTableFooter}>
             <div className={Css.ticketTableFooterWrapper}>
                 <p className={Css.ticketTableFooterRowPerPage}>Rows per page</p>
-                {/* <p className={Css.ticketTableFooterRowPerPageValue}>
-                    {footer.numberPerPage}
-                </p>
-                <figure className={Css.ticketTableFooterRowPerPageMedia}>
-                    <img
-                        className={Css.ticketTableFooterRowPerPageMediaImg}
-                        src={numPage}
-                        alt="Icon to choose the number of item per page"
-                    />
-                   
-                </figure> */}
-                <select name="" id="" onChange={e => dispatch(newNumberPerPage(e.target.value))}>
+                <select className={Css.ticketTableFooterRowPerPageSelect} name="" id="" onChange={e => dispatch(newNumberPerPage(e.target.value))}>
                     <option value={footer.numberPerPage}>{footer.numberPerPage}</option>
                     {
                         numberPerPage.filter(num => num.value != footer.numberPerPage).map(num => <option key={num.id} value={num.value}>{num.value}</option>)

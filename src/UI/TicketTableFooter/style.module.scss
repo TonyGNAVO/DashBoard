@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.ticketTableFooter--rowPerPageValue{
+.ticketTableFooter--rowPerPage--value{
     height: 1.8rem;
     width: 1rem;
     font-style: normal;
@@ -40,6 +40,23 @@
     align-items: center;
     justify-content: center;
     margin-right: 0.3rem;
+
+}
+.ticketTableFooter--rowPerPage--select{
+    height: 1.8rem;
+    width: auto;
+    height: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    letter-spacing: 0.03rem;
+    color:#A6A9BA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.25rem solid #787A87;
 
 }
 
