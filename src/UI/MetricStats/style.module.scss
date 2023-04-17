@@ -1,7 +1,8 @@
+
 .metricStats{
     width: 100%;
     height:54.6rem;
-    margin-top: 3.0rem ;
+    margin-top: 10px;
     background: #FFFFFF;
     border: 0.1rem solid #DFE0EB;
     border-radius: 0.8rem;
@@ -11,17 +12,44 @@
 }
 
 .metricStats--diagram{
+    display: none;
     width: calc(112.2rem - 34.2rem);
     height: 100%;
     padding: 3.2rem;
     position: relative;
 }
 .metricStats--value{
-    width: 34.2rem;
+    width: 100%;
     height: 100%;
     border-left: 0.1rem solid #DFE0EB;
     div:not(:last-child){
         border-bottom: 0.1rem #DFE0EB solid;
+    }
+}
+
+@media screen and  (min-width: 1024px)  {
+    .metricStats{
+        width: 100%;
+        height:54.6rem;
+        margin-top: 3.0rem ;
+        background: #FFFFFF;
+        border: 0.1rem solid #DFE0EB;
+        border-radius: 0.8rem;
+        display: flex;
+        overflow: hidden;
+    
+    }
+    
+    .metricStats--diagram{
+        display: block;
+    }
+    .metricStats--value{
+        width: 34.2rem;
+        height: 100%;
+        border-left: 0.1rem solid #DFE0EB;
+        div:not(:last-child){
+            border-bottom: 0.1rem #DFE0EB solid;
+        }
     }
 }
 

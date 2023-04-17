@@ -1,5 +1,4 @@
 .ticketsCard--title{
-    height: 2.4rem;
     width: 50%;
     font-style: normal;
     font-weight: 700;
@@ -11,10 +10,10 @@
     align-items: center;
     margin-bottom: 0.8rem;
     padding-left: 3.2rem;
+    margin-top: 2.5rem;
 }
 
 .ticketsCard--details{
-
     height: 2rem;
     width: 50%;
     display: inline-flex;
@@ -64,4 +63,144 @@
 .ticketsCard--group--value::before{
     content: " ";
     width: 0.25rem;
+}
+@media screen and  (max-width: 666px)  {
+        .ticketsCard--title{
+                width: 50%;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.1rem;
+                line-height: 2.4rem;
+                letter-spacing: 0.04rem;
+                color: #252733;
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 0.8rem;
+                padding-left: 3.2rem;
+                margin-top: 2.5rem;
+            }
+            
+            .ticketsCard--details{
+                height: 2rem;
+                width: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: end;
+                padding-right: 3.2rem;
+                margin-top: 0.4rem;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 0.9rem;
+                line-height: 2.0rem;
+                letter-spacing: 0.02rem;
+                color: #3751FF;
+            }
+            
+            .ticketsCard--group{
+                height: 1.6rem;
+                margin-left: 3.2rem;
+                color: #9FA2B4;
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.6rem;
+                transform: translateX(0.15%);
+            }
+            .ticketsCard--group--name{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 0.7rem;
+                line-height: 1.6rem;
+                letter-spacing: 0.01rem;
+                color: #9FA2B4;
+                display: flex;
+                align-items: center;
+            }
+            .ticketsCard--group--value{
+                display: inline-block;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 0.7rem;
+                line-height: 1.5rem;
+                letter-spacing: 0.01rem;
+                display: flex;
+                align-items: center;
+                color: #4B506D;
+            }
+            
+            .ticketsCard--group--value::before{
+                content: " ";
+                width: 0.25rem;
+            }
+
+    }
+
+@media screen and  (min-width: 1024px)  {
+    .ticketsCard--title{
+        height: 2.4rem;
+        width: 50%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.04rem;
+        color: #252733;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 0 0.8rem 0;
+        padding-left: 3.2rem;
+        
+    }
+    
+    .ticketsCard--details{
+    
+        height: 2rem;
+        width: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: end;
+        padding-right: 3.2rem;
+        margin-top: 0.4rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        letter-spacing: 0.02rem;
+        color: #3751FF;
+    }
+    
+    .ticketsCard--group{
+        height: 1.6rem;
+        margin-left: 3.2rem;
+        color: #9FA2B4;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        transform: translateX(0.15%);
+    }
+    .ticketsCard--group--name{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.01rem;
+        color: #9FA2B4;
+        display: flex;
+        align-items: center;
+    }
+    .ticketsCard--group--value{
+        display: inline-block;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.01rem;
+        display: flex;
+        align-items: center;
+        color: #4B506D;
+    }
+    
+    .ticketsCard--group--value::before{
+        content: " ";
+        width: 0.25rem;
+    }
 }

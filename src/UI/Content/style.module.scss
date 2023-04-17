@@ -1,5 +1,10 @@
 
 
+.sideLeftContent--wrapper {
+    margin-left:2rem; 
+    margin-right:2rem;
+
+}
 @media screen and  (min-width: 1024px) {
     .sideLeftContent {
         position:relative;
@@ -13,9 +18,6 @@
     }
     .sideLeftContent--wrapper {
         width:  112.2rem;
-        margin-left:3rem; 
-        margin-right:3.3rem;
-    
     }
     
 }

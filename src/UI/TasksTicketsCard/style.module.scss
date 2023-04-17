@@ -1,9 +1,21 @@
 .tasksTickets--card{
-    width: 54.6rem;
-    height:100%;
+    width:100%;
     background: #FFFFFF;
     border: 0.1rem solid #DFE0EB;
     border-radius: 0.8rem;
-    padding: 3.2rem 0 0.8rem 0;
+    margin-top: 3.2rem;
+}
 
+@media screen and  (min-width: 1024px)  {
+    .tasksTickets--card{
+        width: 54.6rem;
+        height:100%;
+        background: #FFFFFF;
+        border: 0.1rem solid #DFE0EB;
+        border-radius: 0.8rem;
+        padding: 3.2rem 0 0.8rem 0;
+        margin:0 0 0 0;
+    
+    }
+    
 }

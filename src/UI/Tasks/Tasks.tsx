@@ -5,8 +5,6 @@ import { useState } from "react";
 
 const TasksCard = () => {
     const [isFormActive, setIsFormActive] = useState(false);
-    // ajout d'un contexte pour les tâches qui a l'ensemble des tâches
-
     return (
         <>
             <h2 className={TasksCardCSS.tasksCardTitle}>Tasks</h2>

@@ -6,45 +6,77 @@
 }
 
 .ticketStatsItem--description{
-
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 2.0rem;
     letter-spacing: 0.02rem;
     color: #252733;
-
     margin-top: 2.0rem;
     margin-bottom: 1.8rem;
     margin-left: 3.2rem;
     margin-right: 2.4rem;
     width: 37.8rem;
-
     display: flex;
     align-items: center;
-
 }
 
 .ticketStatsItem--value{
-
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 2rem;
-    /* identical to box height, or 143% */
-    
     text-align: right;
     letter-spacing: 0.02rem;
-    
-    /* grayscale / gray */
-    
     color: #9FA2B4;
     margin-top: 2.0rem;
     margin-bottom: 1.8rem;
+    margin: 2.0rem 3.2rem 1.8rem 0rem;
     width: 8rem;
-
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+@media screen and  (min-width: 1024px)  {
+    .ticketStatsItem{
+        width: 100%;
+        display: flex;
+        position: relative;
+        border-top: 0.1rem solid #DFE0EB;   
+    }
+    
+    .ticketStatsItem--description{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        letter-spacing: 0.02rem;
+        color: #252733;
+        margin-top: 2.0rem;
+        margin-bottom: 1.8rem;
+        margin-left: 3.2rem;
+        margin-right: 2.4rem;
+        width: 37.8rem;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .ticketStatsItem--value{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-align: right;
+        letter-spacing: 0.02rem;
+        color: #9FA2B4;
+        margin-top: 2.0rem;
+        margin-bottom: 1.8rem;
+        width: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
 
 }
